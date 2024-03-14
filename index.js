@@ -11,9 +11,13 @@ const { default: Axios } = require('axios');
 dotenv.config({path:'./config.env'});
 
 
+app.get("/api/test",(req,res)=>{
+    res.status(200).json({
+        message:"success"
+    })
+})
 
-
-let arr=["https://agnee-enterprise.onrender.com/api/test"]
+let arr=["https://agnee-enterprise.onrender.com/api/test","https://serverloader.onrender.com/api/test"]
 
 const getApi=async()=>{
         arr.forEach(async (link)=>{
